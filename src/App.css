@@ -1,0 +1,10 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.placeholder-light::placeholder {
+  color: #a0a0a0 !important;
+  opacity: 1;
+}
