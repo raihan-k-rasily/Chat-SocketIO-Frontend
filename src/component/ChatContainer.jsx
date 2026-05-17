@@ -29,8 +29,11 @@ function ChatContainer() {
 
     const connectSocket = (user) => {
 
-        const socketUrl = import.meta.env.VITE_SOCKET_URL || 'https://chat-app-backend-0u7m.onrender.com';
-        const newSocket = io(socketUrl);
+        const socketUrl = import.meta.env.VITE_SOCKET_URL || 'https://chat-socketio-backend-1.onrender.com';
+        const newSocket = io(socketUrl, {
+    transports: ["websocket"],
+    withCredentials: true
+})
 
         setSocket(newSocket);
 
